@@ -137,12 +137,18 @@ do
             ;;
     esac
 
+    clear
+    display_board
+    echo "1. Player (O) vs. Computer (X)"
+    echo "2. Player (O) vs. Player (X)"
+    read -r mode
+
     while true
     do
         clear
         display_board
 
-        echo "Enter your move (0-8) or 's' to save the game: "
+        echo "O your move (0-8) or 's' to save the game: "
         read -r human_choice
 
         if [ "$human_choice" == "s" ]
@@ -161,7 +167,7 @@ do
             then
                 clear
                 display_board
-                echo "You win. Congratulations!"
+                echo "O wins."
                 sleep 2
                 break
             fi
@@ -175,13 +181,36 @@ do
                 break
             fi
 
-            computer_move
+            case $mode in
+            1)
+                computer_move
+                ;;
+            2)
+                while true
+                do
+                    clear
+                    display_board
+                    echo "X your move (0-8): "
+                    read -r x_choice
+
+                    if [ "${board[$((x_choice))]}" == "$x_choice" ]
+                    then
+                        board[$((x_choice))]="X"
+                    else
+                        echo "Invalid move. Cell already taken. Try again."
+                        sleep 2
+                        continue
+                    fi
+                    break
+                done
+                ;;
+            esac
 
             if check_winner "X"
             then
                 clear
                 display_board
-                echo "Computer wins!"
+                echo "X wins."
                 sleep 2
                 break
             fi
