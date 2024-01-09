@@ -1,0 +1,18 @@
+version: "3.1"
+
+stories:
+
+- story: order_scenario1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: show_menu
+  - action: action_show_menu
+  - intent: place_order
+  - action: action_summarize_order
+  - intent: affirm
+  - action: utter_delivery_method
+  - intent: delivery
+  - action: utter_ask_address
+  - intent: address
+  - action: action_address

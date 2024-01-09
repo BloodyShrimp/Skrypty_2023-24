@@ -1,0 +1,54 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say 'Hello' anytime the user says hello
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say 'thank you' anytime the user says thank you
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+
+- rule: Ask anything else after ordering
+  steps:
+  - intent: place_order
+  - action: action_summarize_order
+  - active_loop: restaurant_form
+
+- rule: Show menu when client asks
+  steps:
+  - intent: show_menu
+  - action: action_show_menu
+
+- rule: Answer if open when client asks
+  steps:
+  - intent: open_hours 
+  - action: action_open_hours
+
+- rule: Ask for adress when client picks delivery method
+  steps:
+  - intent: delivery
+  - action: utter_ask_address
+
+- rule: Save address when client tells it
+  steps:
+  - intent: address
+  - action: action_address
+
+- rule: Confirm takeout when client picks takeout method
+  steps:
+  - intent: takeout
+  - action: utter_takeout

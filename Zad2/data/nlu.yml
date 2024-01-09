@@ -1,0 +1,221 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: show_menu
+  examples: |
+    - show me the menu
+    - display menu options
+    - can you show me what's available
+    - provide the menu details
+    - menu items, please
+    - I want to see the menu
+    - show me the available choices
+    - what's on the food list
+    - what's on the drink list
+    - list of available items
+    - display the food and drinks
+    - what's there to order
+    - give me the menu details
+    - present the available options
+    - menu card, please
+    - what's on offer
+    - let me know my choices
+    - show me the available selections
+    - what's on the dining options
+    - list down the menu
+    - what's cookin'?
+    - menu card, please
+    - what's available for ordering
+    - lay out the menu
+    - make the menu visible
+    - menu presentation
+    - give me the dish options
+    - list of food and drinks
+    - what's cookin'?
+    - show me the culinary options
+    - what's on the serving list
+    - present the menu choices
+    - what's available to eat
+    - showcase the menu
+    - what can I choose from
+    - unveil the menu
+    - display your offerings
+    - what's on the dining table
+
+
+- intent: thank_you
+  examples: |
+    - thanks
+    - thank you
+    - thx
+    - thanks a lot
+    - tahnk you
+    - thankyou
+    - thanks so much
+    - appreciate it
+    - thanks a bunch
+    - thanks a million
+    - cheers
+    - kudos
+    - many thanks
+    - big thanks
+    - thank you very much
+    - thanks heaps
+    - thanks a ton
+    - thanks a million times
+    - thanks heaps
+    - thanks for your help
+
+- intent: open_hours
+  examples: |
+    - when are you open
+    - when do you open
+    - are you open [today](day)
+    - are you open on [monday](day) at [12](hour)
+    - when do you close on [sunday](day)
+    - are you open [tomorrow](day) at [10](hour)
+    - are you open [monday](day) at [9](hour)
+    - are you open [saturday](day) at [11](hour)
+    - are you open [sunday](day) at [19](hour)
+    - are you open [friday](day) at [20](hour)
+    - are you open [tuesday](day) at [21](hour)
+    - are you open [wednesday](day) at [8](hour)    
+    - is this restaurant open on [friday](day)
+    - are you open [tomorrow](day)
+    - when do you close
+    - what are your business hours
+    - tell me your opening times
+
+- intent: place_order
+  examples: |
+    - I would like to order [2 pizza with no cheese](order) and a [hot-dog](order)
+    - I want to order [tiramisu](order)
+    - Let me get a [burger](order)
+    - I'll take [2 pizza](order)
+    - I want [1 spaghetti carbonara](order)
+    - [2 hot-dog](order) please
+    - I would like a [hot-dog without mustard](order)
+    - I want [lasagne](order)
+    - I would like [1 burger with extra cheese](order) and [2 hot-dog](order)
+    - I want [1 spaghetti carbonara with no cheese](order) and a [pizza with extra sauce](order)
+    - I want [burger](order) and [2 tiramisu](order) 
+    - I would like a [burger](order) [2 tiramisu](order) and [3 hot-dog](order)
+    - Let me get a [spaghetti carbonara](order) and [2 pizza](order)
+    - I want [1 lasagne](order)
+    - I want [1 lasagne](order) and [2 pizza](order)
+    - I want [10 burger](order)
+    - I would like to order [10 tiramisu](order)
+
+- intent: delivery
+  examples: |
+    - can I get a delivery
+    - bring food to my house
+    - deliver food to my house
+    - I'll take a delivery
+    - please deliver my order
+    - arrange for a delivery
+    - I want to order with delivery
+    - is home delivery available?
+    - bring the package to my doorstep
+    - schedule a delivery for me
+    - I need something delivered
+    - can you bring it to my address?
+    - arrange for home delivery
+    - I'd like to receive my order at home
+    - send the items to my location
+    - deliver to my specified address
+    - I want my order sent to my house
+    - arrange a home drop-off
+    - request a home delivery service
+    - drop off the goods at my place
+    - is there a delivery option available?
+
+
+- intent: address
+  examples: |
+    - Polna 5/7, 00-001 Warszawa
+    - Cicha 50, 30-424 Kraków
+    - Wrocławska 1, 50-001 Wrocław
+    - Gdańska 1, 80-001 Gdańsk
+    - Poznańska 1, 60-001 Poznań
+    - Słowacka 12/34, 20-123 Lublin
+    - Lecha 22, 90-567 Łódź
+    - Mickiewicza 78, 45-678 Opole
+    - Armii Krajowej 9, 70-234 Szczecin
+    - Klonowa 3A, 10-345 Olsztyn
+    - Jasna 15, 35-678 Rzeszów
+    - Kościuszki 7, 25-789 Kielce
+    - Krótka 56, 15-432 Białystok
+    - Dworcowa 33, 55-789 Legnica
+    - Nadbrzeżna 21, 40-567 Katowice
+    - Wiatraczną 8, 85-432 Bydgoszcz
+    - Morska 11, 90-234 Gdynia
+    - Plac Zbawiciela 2/5, 03-123 Warszawa
+    - Piłsudskiego 4, 30-567 Kraków
+    - Złota 15, 50-234 Wrocław
+
+- intent: takeout
+  examples: |
+    - I'll pick it up
+    - I'll take it to go
+    - Takeout
+    - Takeout, please
+    - I will pick it up
+    - I will take it to go
+    - Let me get it to go
+    - Let me get takeout

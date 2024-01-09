@@ -1,0 +1,65 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - show_menu
+  - thank_you
+  - open_hours
+  - place_order
+  - delivery
+  - address
+  - takeout
+
+forms:
+  restaurant_form:
+    required_slots:
+      - order
+      - address
+
+slots:
+  order:
+    type: text
+    mappings:
+      - type: from_text
+  address:
+    type: text
+    mappings:
+      - type: from_text
+
+entities:
+- day
+- hour
+- order
+
+responses:
+  utter_greet:
+  - text: Hello! How can I help?
+  utter_goodbye:
+  - text: Goodbye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_thank_you:
+  - text: You're welcome.
+  utter_anything_else:
+  - text: Is there anything else I can help you with?
+  utter_delivery_method:
+  - text: Would you like to pick up your order or have it delivered?
+  utter_ask_address:
+  - text: Please tell me your address.
+  utter_takeout:
+  - text: We will prepare your order for takeout.
+
+actions:
+- utter_greet
+- action_show_menu
+- action_summarize_order
+- action_address
+- action_open_hours
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
