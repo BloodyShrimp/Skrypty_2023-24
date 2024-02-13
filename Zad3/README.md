@@ -22,7 +22,7 @@ npm install
 npm start
 ```
 
-Express.js server will be enabled under address `localhost:8080`. 
+Express.js server will be enabled under address `localhost:3001`. 
 <br>
 <br>
 
@@ -35,7 +35,7 @@ npm install
 npm start
 ```
 
-React.js server will be enabled under the address `localhost:3001`. 
+React.js server will be enabled under the address `localhost:3000`. 
 
 ----------
 <br>
