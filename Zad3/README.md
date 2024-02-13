@@ -9,7 +9,7 @@ Prosty sklep z serwerem REST API
 ## **Starting up**
 
 ### **Database**
-Start SQL server, create database named 'www_movies'. App will create database structure.
+Start SQL server, create database named 'shop_db'. App will create database structure.
 <br>
 <br>
 
